@@ -1,7 +1,7 @@
 # Emmet File
 
 <center>
-    <img src="https://github.com/Crunchitect/emmet-file/blob/master/md_assets/emmetfile.svg">
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile.png">
     <h3 style="margin:0;padding:0">A powerful way to setup project scaffolds.</h3>
     <p>Using Familiar Emmet syntax.</p>
 </center>
@@ -12,12 +12,12 @@ Emmet File is a extension to scaffold different file & folder structure with [Em
 
 From creating multiple files at once.
 <center>
-    <img src="https://github.com/Crunchitect/emmet-file/blob/master/md_assets/emmetfile1.svg">
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile1.png">
 </center>
 
 To a whole project scaffolding
 <center>
-    <img src="https://github.com/Crunchitect/emmet-file/blob/master/md_assets/showoff.gif">
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/showoff.gif">
 </center>
 
 ## How to use?
@@ -33,7 +33,7 @@ Call the `Track Files` in the Command Pallete (`Ctrl+Shift+P`).
 
 Create multiple sibling files using `+`, try `index.html+styles.css`!
 <center>
-    <img src="https://github.com/Crunchitect/emmet-file/blob/master/md_assets/emmetfile2.svg">
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile2.png">
 </center>
 
 <h3 style="margin:0;padding:0;">
@@ -44,7 +44,7 @@ Create multiple sibling files using `+`, try `index.html+styles.css`!
 
 Create Directories with `!`, as `dirname!file`.
 <center>
-    <img src="https://github.com/Crunchitect/emmet-file/blob/master/md_assets/emmetfile3.svg">
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile3.png">
 </center>
 <h3 style="margin:0;padding:0;">
     <span style="color:#FF6188">^</span> 
@@ -56,5 +56,5 @@ Create Directories with `!`, as `dirname!file`.
 
 Same as Emmet, but replace `*` with `^`
 <center>
-    <img src="https://github.com/Crunchitect/emmet-file/blob/master/md_assets/emmetfile4.svg">
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile4.png">
 </center>
