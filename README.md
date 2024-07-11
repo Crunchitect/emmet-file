@@ -1,7 +1,7 @@
 # Emmet File
 
 <center>
-    <img src="./emmetfile.svg">
+    <img src="https://github.com/Crunchitect/emmet-file/blob/master/md_assets/emmetfile.png">
     <h3 style="margin:0;padding:0">A powerful way to setup project scaffolds.</h3>
     <p>Using Familiar Emmet syntax.</p>
 </center>
@@ -11,14 +11,10 @@
 Emmet File is a extension to scaffold different file & folder structure with [Emmet-style syntax](https://emmet.io/).
 
 From creating multiple files at once.
-<center>
-    <img src="./md_assets/emmetfile1.svg"/>
-</center>
+![](md_assets/emmetfile1.png)
 
 To a whole project scaffolding
-<center>
-    <img src="./md_assets/showoff.gif"/>
-</center>
+![](md_assets/showoff.gif)
 
 ## How to use?
 Call the `Track Files` in the Command Pallete (`Ctrl+Shift+P`).
@@ -32,9 +28,7 @@ Call the `Track Files` in the Command Pallete (`Ctrl+Shift+P`).
 <hr />
 
 Create multiple sibling files using `+`, try `index.html+styles.css`!
-<center>
-    <img src="./md_assets/emmetfile2.svg"/>
-</center>
+![](md_assets/emmetfile2.png)
 
 <h3 style="margin:0;padding:0;">
     <span style="color:#FF6188">!</span> 
@@ -43,9 +37,7 @@ Create multiple sibling files using `+`, try `index.html+styles.css`!
 <hr />
 
 Create Directories with `!`, as `dirname!file`.
-<center>
-    <img src="./md_assets/emmetfile3.svg"/>
-</center>
+![](md_assets/emmetfile3.png)
 
 <h3 style="margin:0;padding:0;">
     <span style="color:#FF6188">^</span> 
@@ -56,6 +48,4 @@ Create Directories with `!`, as `dirname!file`.
 <hr />
 
 Same as Emmet, but replace `*` with `^`
-<center>
-    <img src="./md_assets/emmetfile4.svg"/>
-</center>
+![](md_assets/emmetfile4.png)
