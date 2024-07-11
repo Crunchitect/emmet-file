@@ -10,6 +10,15 @@ export function activate(context: vscode.ExtensionContext) {
     const disposable = vscode.commands.registerCommand(
         'emmet-file.track',
         () => {
+            try {
+                const current_uri =
+                    vscode.window.activeTextEditor!.document.uri;
+            } catch {
+                vscode.window.showInformationMessage(
+                    'Please make an active file to parse your directory!'
+                );
+            }
+            const encoder = new TextEncoder();
             const current_folder = vscode.workspace.getWorkspaceFolder(
                 vscode.window.activeTextEditor!.document.uri
             )!;
@@ -19,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
                 false,
                 false
             );
-
+            vscode.window.showInformationMessage('Tracking Enabled!');
             watcher.onDidCreate((e) => {
                 const edit = new vscode.WorkspaceEdit();
                 let parent: string | string[] = e.path.split('/')!;
@@ -31,15 +40,27 @@ export function activate(context: vscode.ExtensionContext) {
                     filelist = <string[]>parse(abbr);
                     console.log(abbr, filelist);
                 } catch (err) {
-                    vscode.window.showInformationMessage('Failed Parse :(');
+                    vscode.window.showInformationMessage('Invalid Parsing!');
                     return;
                 }
                 for (const file of filelist) {
+                    const [filename, filecontents] = <
+                        [string, string | undefined]
+                    >file.split('{');
                     const create = vscode.Uri.joinPath(
                         vscode.Uri.file(parent),
-                        file
+                        filename
                     );
-                    edit.createFile(create);
+                    edit.createFile(
+                        create,
+                        filecontents
+                            ? {
+                                  contents: encoder.encode(
+                                      filecontents.slice(0, -1)
+                                  ),
+                              }
+                            : undefined
+                    );
                 }
                 edit.deleteFile(e);
                 vscode.workspace.applyEdit(edit);

@@ -14,7 +14,7 @@ Group
 
 Dir
 	= word: Word '!' term: Term {
-    	if (typeof term == 'string') {
+    	if (typeof term === 'string') {
         	return word + '/' + term
         } else {
         	return term.map(e => word + '/' + e)
@@ -25,11 +25,14 @@ Rep
 	= term: (Group / Word) '^' num: [0-9]+ {
     	const rep = Number(num.join(''))
         const result = [];
+        
+        const repl = i => m => (i+[]).padStart(m.length, '0');
+        
         for (let i = 1; i <= rep; i++) {
-            if (typeof term == 'string') {
-                result.push(term.replace('$', i))
+            if (typeof term === 'string') {
+                result.push(term.replace(/\$+/g, repl(i)))
             } else {
-                result.push(term.map(e => e.replace('$', i)))
+                result.push(term.map(e => e.replace(/\$+/g, repl(i))))
             }
         	
         }
@@ -37,6 +40,6 @@ Rep
    	}
 
 Word
-	= stuff: [^+!^{}()]* {
+	= stuff: [^+!^()]* {
 	    return stuff.join('');
 }
