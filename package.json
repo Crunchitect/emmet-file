@@ -23,7 +23,20 @@
         "command": "emmet-file.track",
         "title": "Track Files"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "EmmetFile",
+      "properties": {
+        "emmetFile.templates": {
+          "type": "object",
+          "default": {
+            "[html]": "index.html+style.css+main.js",
+            "[py]": "main.py+requirements.txt",
+            "[git]": "README.md+LICENSE.md+.gitignore"
+          }
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

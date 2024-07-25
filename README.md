@@ -81,6 +81,47 @@ For more control of the `^` command, You can specify its range with `^[stop]@[st
     <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile6.png">
 </center>
 
+<h3 style="margin:0;padding:0;">
+    <span style="color:#FF6188">\</span> 
+    Escape
+</h3>
+<hr />
+
+For typing special characters, use the `\` to escape the syntax.
+<center>
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile8.png">
+</center>
+
+<h3 style="margin:0;padding:0;">
+    <span style="color:#FF6188">\</span> 
+    Escape
+</h3>
+<hr />
+
+For typing special characters, use the `\` to escape the syntax.
+<center>
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile7.png">
+</center>
+
+<h3 style="margin:0;padding:0;">
+    <span style="color:#FF6188">[]</span> 
+    Templates
+</h3>
+<hr />
+
+Special preprocessing and templating functionality is in the `[]`. You may add special shortcuts to long emmet file abbreviations.
+<center>
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile8.png">
+</center>
+
+## Template Settings
+
+To add new templates, edit the `Emmet File > Templates` settings (`emmetFile.templates`) in the `settings.json` file.
+
+<center>
+    <img src="https://raw.githubusercontent.com/Crunchitect/emmet-file/master/md_assets/emmetfile9.png">
+</center>
+
 ## Exceptions
 
 > Please make an active file to parse your directory!

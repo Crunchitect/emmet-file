@@ -1,19 +1,19 @@
 Expression
-	= init: Term more: ("+" Term)* {
+	= init: Term more: (!"\\" "+" Term)* {
     	// return init + more.filter(e => e !== '+').join('')
-        return ([init].concat(more.flat().filter(e => e !== '+'))).flat(2);
+        return ([init].concat(more.flat().filter(e => e !== '+' && e))).flat(2);
     }
 
 Term
 	= Rep / Group / Dir / Word
 
 Group
-	= "(" expr: Expression ")" {
+	= !'\\' "(" expr: Expression !'\\' ")" {
     	return expr.length > 1 ? expr.flat() : expr[0];
     }
 
 Dir
-	= word: Word '!' term: Term {
+	= word: Word !'\\' '!' term: Term {
     	if (typeof term === 'string') {
         	return word + '/' + term
         } else {
@@ -22,7 +22,7 @@ Dir
     }
 
 Rep
-	= term: (Group / Word) '^' num: [0-9]+ {
+	= term: (Group / Word) !'\\' '^' num: [0-9]+ {
     	const rep = Number(num.join(''))
         const result = [];
         
@@ -40,6 +40,8 @@ Rep
    	}
 
 Word
-	= stuff: [^+!^()]* {
-	    return stuff.join('');
+	= stuff: (re: [^+!^()\\] / "\\" Reserved)+ {
+	    return stuff.flat().join('');
 }
+
+Reserved = [+!^()\\]

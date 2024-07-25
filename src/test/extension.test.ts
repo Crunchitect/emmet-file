@@ -14,4 +14,4 @@ suite('Extension Test Suite', () => {
     });
 });
 
-// components!(HelloWorld.vue+GCode.vue)+views!Home.vue+lib!(supabase!(supabase.js+index.tsx)+index.d.ts)+test!assert$.ts^5+(index.html+index.ts)
+//
