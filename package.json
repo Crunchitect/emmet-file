@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/Crunchitect/emmet-file"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "crunchi",
   "icon": "emmetfile.png",
   "engines": {
@@ -15,13 +15,19 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "emmet-file.track",
         "title": "Track Files"
+      },
+      {
+        "command": "emmet-file.untrack",
+        "title": "Untrack Files"
       }
     ],
     "configuration": {
