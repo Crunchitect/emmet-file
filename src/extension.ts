@@ -17,6 +17,8 @@ const watcher = vscode.workspace.createFileSystemWatcher(
     false
 );
 
+let fileEmmetCallback: vscode.Disposable | null = null;
+
 function emmetReplace(e: vscode.Uri) {
     const edit = new vscode.WorkspaceEdit();
     let parent: string | string[] = e.path.split('/')!;
@@ -59,12 +61,14 @@ function emmetReplace(e: vscode.Uri) {
 
 function connectEmmetFile() {
     vscode.window.showInformationMessage('Tracking Enabled!');
-    watcher.onDidCreate(emmetReplace);
+    fileEmmetCallback = watcher.onDidCreate(emmetReplace);
 }
 
 function unconnectEmmetFile() {
     vscode.window.showInformationMessage('Tracking Disabled!');
-    watcher.onDidCreate(() => {});
+    // watcher.onDidCreate(() => {});
+    fileEmmetCallback?.dispose();
+    fileEmmetCallback = null;
 }
 
 export function activate(context: vscode.ExtensionContext) {
